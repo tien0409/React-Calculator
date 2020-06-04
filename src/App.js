@@ -12,9 +12,24 @@ function App() {
       case "AC":
         handleClear();
         break;
+      case "/":
+      case "x":
+      case "+":
+      case "-":
+        handleMath(type);
+        break;
       default:
         break;
     }
+  };
+
+  const handleClear = () => {
+    setDisplay("0");
+    setResult("0");
+  };
+
+  const handleMath = (type) => {
+    console.log(type);
   };
 
   return (
