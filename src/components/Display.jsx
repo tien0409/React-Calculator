@@ -3,11 +3,11 @@ import "./Display.css";
 import DisplayTop from "./DisplayTop";
 import DisplayBottom from "./DisplayBottom";
 
-const Display = () => {
+const Display = (props) => {
   return (
     <div className="display">
-      <DisplayTop />
-      <DisplayBottom />
+      <DisplayTop display={props.display} />
+      <DisplayBottom result={props.result} />
     </div>
   );
 };

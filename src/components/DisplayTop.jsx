@@ -1,8 +1,8 @@
 import React from "react";
 import "./DisplayTop.css";
 
-const DisplayTop = () => {
-  return <div className="display-top">Display Top</div>;
+const DisplayTop = (props) => {
+  return <div className="display-top">{props.display}</div>;
 };
 
 export default DisplayTop;
