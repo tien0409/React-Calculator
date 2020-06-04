@@ -7,7 +7,7 @@ const Clickable = (props) => {
     1: [
       { value: "AC", name: "clear" },
       { value: "/", name: "math divide" },
-      { value: "x", name: "math multiply" },
+      { value: "*", name: "math multiply" },
     ],
     2: [
       { value: "7", name: "number seven" },
@@ -65,7 +65,7 @@ const Clickable = (props) => {
         </div>
         <div className="right-bottom-cal">
           {rowButtons[6].map((i) => (
-            <Button key={i.name} onClick={props.onClick} button={i} />
+            <Button key={i} onClick={props.onClick} button={i} />
           ))}
         </div>
       </div>
