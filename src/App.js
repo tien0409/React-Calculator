@@ -19,6 +19,7 @@ function App() {
         handleMath(type);
         break;
       default:
+        handleNumber(type);
         break;
     }
   };
@@ -28,8 +29,18 @@ function App() {
     setResult("0");
   };
 
-  const handleMath = (type) => {
-    console.log(type);
+  const handleMath = (type) => {};
+
+  const handleNumber = (type) => {
+    if (result.length >= 30) {
+      setResult("Digit Limit");
+    } else if (result === "0" || result === "Digit Limit") {
+      setResult(type);
+      setDisplay(type);
+    } else {
+      setDisplay(display.concat(type));
+      setResult(result.concat(type));
+    }
   };
 
   return (
