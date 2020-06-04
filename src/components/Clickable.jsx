@@ -1,40 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Clickable.css";
+import Button from "./Button";
 
 const Clickable = () => {
+  const [rowButtons, setRowButtons] = useState({
+    1: [
+      { value: "AC", name: "clear" },
+      { value: "/", name: "math divide" },
+      { value: "x", name: "math multiply" },
+    ],
+    2: [
+      { value: "7", name: "seven" },
+      { value: "8", name: "eight" },
+      { value: "9", name: "nice" },
+      { value: "+", name: "math add" },
+    ],
+    3: [
+      { value: "4", name: "four" },
+      { value: "5", name: "five" },
+      { value: "6", name: "sĩ" },
+      { value: "-", name: "math subtract" },
+    ],
+    4: [
+      { value: "1", name: "one" },
+      { value: "2", name: "two" },
+      { value: "3", name: "three" },
+    ],
+    5: [
+      { value: "0", name: "zero" },
+      { value: ".", name: "dot" },
+    ],
+    6: [{ value: "=", name: "equals" }],
+  });
+
   return (
     <div className="clickable">
       <div className="row">
-        <button className="btn clear">AC</button>
-        <button className="btn math divide">/</button>
-        <button className="btn math multiply">x</button>
+        {rowButtons[1].map((i) => (
+          <Button button={i} />
+        ))}
       </div>
       <div className="row">
-        <button className="btn seven">7</button>
-        <button className="btn eight">8</button>
-        <button className="btn nine">9</button>
-        <button className="btn math subtract">-</button>
+        {rowButtons[2].map((i) => (
+          <Button button={i} />
+        ))}
       </div>
       <div className="row">
-        <button className="btn four">4</button>
-        <button className="btn five">5</button>
-        <button className="btn six">6</button>
-        <button className="btn math add">+</button>
+        {rowButtons[3].map((i) => (
+          <Button button={i} />
+        ))}
       </div>
       <div className="row bottom-cal">
         <div className="left-bottom-cal">
           <div className="top">
-            <button className="btn one">1</button>
-            <button className="btn two">2</button>
-            <button className="btn three">3</button>
+            {rowButtons[4].map((i) => (
+              <Button button={i} />
+            ))}
           </div>
           <div className="bottom">
-            <button className="btn zero">0</button>
-            <button className="btn dot">.</button>
+            {rowButtons[5].map((i) => (
+              <Button button={i} />
+            ))}
           </div>
         </div>
         <div className="right-bottom-cal">
-          <button className="btn equals">=</button>
+          {rowButtons[6].map((i) => (
+            <Button button={i} />
+          ))}
         </div>
       </div>
     </div>
