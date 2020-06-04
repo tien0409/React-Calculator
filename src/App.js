@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import "./App.css";
 import Display from "./components/Display";
 import Clickable from "./components/Clickable";
+import * as math from "mathjs";
 
 function App() {
   const [result, setResult] = useState("0");
   const [display, setDisplay] = useState("0");
+  const [resultEquals, setResultEquals] = useState(false);
 
   const handleClick = (type) => {
     switch (type) {
@@ -20,6 +22,9 @@ function App() {
         break;
       case ".":
         handleDot(type);
+        break;
+      case "=":
+        handleEquals();
         break;
       default:
         handleNumber(type);
@@ -49,6 +54,7 @@ function App() {
     } else if (result === "0" || result === "Digit Limit") {
       setResult(type);
       setDisplay(type);
+      // setResultEquals(false);
     } else if (
       result === "+" ||
       result === "-" ||
@@ -56,6 +62,7 @@ function App() {
       result === "/"
     ) {
       setResult(type);
+      setDisplay(display.concat(type));
     } else {
       setDisplay(display.concat(type));
       setResult(result.concat(type));
@@ -67,6 +74,11 @@ function App() {
       setDisplay(display.concat(type));
       setResult(result.concat("."));
     }
+  };
+
+  const handleEquals = () => {
+    setResult(String(math.evaluate(display)));
+    setResultEquals(true);
   };
 
   return (
