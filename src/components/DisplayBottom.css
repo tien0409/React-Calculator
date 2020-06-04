@@ -1,0 +1,6 @@
+.display-bottom {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}

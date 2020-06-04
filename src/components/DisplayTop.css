@@ -1,0 +1,6 @@
+.display-top {
+  color: orange;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.25rem;
+}

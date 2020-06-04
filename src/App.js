@@ -1,9 +1,15 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import Display from "./components/Display";
+import Clickable from "./components/Clickable";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="calculator">
+      <Display />
+      <Clickable />
+    </div>
+  );
 }
 
 export default App;

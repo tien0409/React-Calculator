@@ -1,0 +1,91 @@
+.clickable {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  width: 100%;
+  height: 100px;
+}
+
+.row.bottom-cal {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-bottom-cal {
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-bottom-cal .top {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+
+.left-bottom-cal .top .btn {
+  width: 33.333333333333333333333333333333333333333333333%;
+}
+
+.left-bottom-cal .bottom {
+  width: 100%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.left-bottom-cal .bottom .zero {
+  width: 100%;
+}
+
+.left-bottom-cal .bottom .dot {
+  width: 100%;
+}
+
+.right-bottom-cal {
+  width: 25%;
+  height: 100%;
+}
+
+.btn {
+  width: 25%;
+  height: 100%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  background-color: #4d4d4d;
+  color: #eee;
+  cursor: pointer;
+  outline: 1px solid black;
+}
+
+.btn:hover {
+  border: 1px solid whitesmoke;
+  color: #000;
+}
+
+.btn.clear {
+  width: 50%;
+  background-color: rgb(172, 57, 57);
+}
+
+.btn.equals {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 68, 102);
+}
+
+.btn.math {
+  background-color: rgb(102, 102, 102);
+}
