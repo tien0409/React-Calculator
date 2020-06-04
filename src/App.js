@@ -62,7 +62,12 @@ function App() {
     }
   };
 
-  const handleDot = (type) => {};
+  const handleDot = (type) => {
+    if (result.indexOf(".") < 0) {
+      setDisplay(display.concat(type));
+      setResult(result.concat("."));
+    }
+  };
 
   return (
     <div className="calculator">
